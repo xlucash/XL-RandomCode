@@ -1,0 +1,9 @@
+name: XL-RandomCode
+version: '${project.version}'
+main: me.xlucash.xlrandomcode.XLRandomCode
+api-version: '1.19'
+commands:
+  kod:
+    description: Wprowadz kod z konkursu
+    usage: /<command> <kod>
+    aliases: [code]

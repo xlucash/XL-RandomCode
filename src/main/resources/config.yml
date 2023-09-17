@@ -1,0 +1,5 @@
+time-delay-in-seconds: 300
+code-length: 8
+code-message: "Osoba która przepisze najszybciej kod: <kod> używając /kod (kod) zdobywa: <Nagroda>"
+reward-command: "give <player> minecraft:diamond 1"
+winner-message: "<nick> przepisał kod pierwszy! Gratulacje!"
