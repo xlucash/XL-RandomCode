@@ -1,5 +1,15 @@
-time-delay-in-seconds: 300
+time-delay-in-minutes: 60
 code-length: 8
-code-message: "Osoba która przepisze najszybciej kod: <kod> używając /kod (kod) zdobywa: <Nagroda>"
-reward-command: "give <player> minecraft:diamond 1"
-winner-message: "<nick> przepisał kod pierwszy! Gratulacje!"
+code-message: "&a&lK&2&lO&a&lD &7| &fOsoba ktora przepisze najszybciej kod: &a<kod> &fuzywajac &a/kod {kod} &fzdobywa: &b<Nagroda>"
+winner-message: "&a&lK&2&lO&a&lD &7| &a<nick> &fprzepisal kod jako pierwszy! &6Gratulacje!"
+rewards:
+  - displayname: "Super Miecz"
+    command: "give %player% diamond_sword 1"
+  - displayname: "Zlote Jablko"
+    command: "give %player% golden_apple 1"
+  - displayname: "Diament"
+    command: "give %player% diamond 1"
+  - displayname: "Zloto"
+    command: "give %player% gold_ingot 1"
+  - displayname: "Zelazo"
+    command: "give %player% iron_ingot 1"

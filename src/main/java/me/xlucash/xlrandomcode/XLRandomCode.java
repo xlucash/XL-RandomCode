@@ -9,7 +9,7 @@ public final class XLRandomCode extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        saveDefaultConfig();
+        reloadConfig();
         codeManager = new CodeManager(this);
 
         getCommand("kod").setExecutor(new CodeCommand(codeManager));
@@ -17,6 +17,6 @@ public final class XLRandomCode extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        saveDefaultConfig();
+        saveConfig();
     }
 }
