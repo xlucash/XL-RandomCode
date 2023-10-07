@@ -2,6 +2,7 @@ time-delay-in-minutes: 60
 code-length: 8
 code-message: "&a&lK&2&lO&a&lD &7| &fOsoba ktora przepisze najszybciej kod: &a<kod> &fuzywajac &a/kod {kod} &fzdobywa: &b<Nagroda>"
 winner-message: "&a&lK&2&lO&a&lD &7| &a<nick> &fprzepisal kod jako pierwszy! &6Gratulacje!"
+wrong-code-message: "&a&lK&2&lO&a&lD &7| &cWprowadzony kod jest niepoprawny!"
 rewards:
   - displayname: "Super Miecz"
     command: "give %player% diamond_sword 1"

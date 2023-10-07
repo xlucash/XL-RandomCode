@@ -59,15 +59,20 @@ public class CodeManager {
 
     public void playerEnteredCode(Player player, String code) {
         if (!isCodeActive) return;
-        if (code.equals(currentCode)) {
-            isCodeActive = false;
 
-            String rewardCommand = currentReward.getCommand().replace("%player%", player.getName());
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), rewardCommand);
-
-            String winnerMessage = plugin.getConfig().getString("winner-message").replace("<nick>", player.getName());
-            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', winnerMessage));
+        if (!code.equals(currentCode)) {
+            String wrongCodeMessage = plugin.getConfig().getString("wrong-code-message");
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', wrongCodeMessage));
+            return;
         }
+
+        isCodeActive = false;
+
+        String rewardCommand = currentReward.getCommand().replace("%player%", player.getName());
+        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), rewardCommand);
+
+        String winnerMessage = plugin.getConfig().getString("winner-message").replace("<nick>", player.getName());
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', winnerMessage));
     }
 
     private List<Reward> fetchRewards() {

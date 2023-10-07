@@ -27,6 +27,11 @@ public class CodeCommand implements CommandExecutor {
             return true;
         }
 
+        if (!codeManager.isCodeActive()) {
+            player.sendMessage("Nie ma aktywnego kodu!");
+            return true;
+        }
+
         String enteredCode = args[0];
         codeManager.playerEnteredCode(player, enteredCode);
         return true;
