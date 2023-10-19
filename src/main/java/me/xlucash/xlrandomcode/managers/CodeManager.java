@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class CodeManager {
     private final XLRandomCode plugin;
-    private final FileConfiguration config;
+    private FileConfiguration config;
     private final Random random = new Random();
     private final List<Reward> rewards;
 
@@ -24,9 +24,14 @@ public class CodeManager {
 
     public CodeManager(XLRandomCode plugin) {
         this.plugin = plugin;
-        this.config = plugin.getConfig();
+        loadConfig();
         this.rewards = fetchRewards();
         scheduleNextCode();
+    }
+
+    private void loadConfig() {
+        plugin.reloadConfig();
+        config = plugin.getConfig();
     }
 
     public void scheduleNextCode() {

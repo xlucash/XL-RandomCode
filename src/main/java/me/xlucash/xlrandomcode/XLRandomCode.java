@@ -9,14 +9,14 @@ public final class XLRandomCode extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        reloadConfig();
         codeManager = new CodeManager(this);
 
         getCommand("kod").setExecutor(new CodeCommand(codeManager));
+
+        saveDefaultConfig();
     }
 
     @Override
     public void onDisable() {
-        saveConfig();
     }
 }
